@@ -1,9 +1,10 @@
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { AppComponent } from "./app.component";
-import { TimesheetManagementComponent } from "./timesheet-management/timesheet-management.component";
-import {MatIconModule} from '@angular/material/icon';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { TimesheetManagementComponent } from './timesheet-management/timesheet-management.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -11,17 +12,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppComponent,
     TimesheetManagementComponent
   ],
-  imports: [FormsModule,
+  imports: [
+    MatFormFieldModule,
     MatIconModule,
-    MatFormFieldModule],
-  exports: [FormsModule,
-    MatIconModule,
-
-    MatFormFieldModule],
-  providers: [
-    // ForecastService,
-    // WeatherIconsService
+    MatButtonModule,
+    FormsModule
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
